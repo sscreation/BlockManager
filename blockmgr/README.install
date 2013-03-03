@@ -1,0 +1,19 @@
+Installing
+----------
+
+make
+if you want to install the library and header files to the directory named ./inst
+
+make install INSTALLDIR=./inst
+
+if installation directory is ./inst
+compile your code with cflags 
+
+INSTALLDIR=./inst
+
+-I $(INSTALLDIR)/include/blockmgr 
+
+linker flags 
+-L$(INSTALLDIR)/libs -lblockmgr -lpthread
+
+Dont forget to export LD_LIBRARY_PATH=$(INSTALLDIR)
